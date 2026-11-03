@@ -44,11 +44,12 @@ CONF_OUTDOOR_DEFROST_TEMPERATURE = "outdoor_defrost_temperature"
 CONF_OUTDOOR_IN_AIR_TEMPERATURE = "outdoor_in_air_temperature"
 CONF_OUTDOOR_OUT_AIR_TEMPERATURE = "outdoor_out_air_temperature"
 
-
-
-
-
-
+CONF_INDOOR_PM2P5_VALUE = "conf_indoor_pm2p5_value"
+CONF_OUTDOOR_PM2P5_VALUE = "conf_outdoor_pm2p5_value"
+CONF_CH2O_VALUE = "conf_ch2o_value"
+CONF_VOC_VALUE = "conf_voc_value"
+CONF_CO2_VALUE = "conf_co2_value"
+ 
 
 
 
