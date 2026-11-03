@@ -27,8 +27,8 @@ from esphome.const import (
     UNIT_HERTZ,
     UNIT_PERCENT,
     UNIT_WATT,
-   # UNIT_MICROGRAMS_PER_CUBIC_METER,
-   # UNIT_PARTS_PER_MILLION
+    UNIT_MICROGRAMS_PER_CUBIC_METER,
+    UNIT_PARTS_PER_MILLION
 )
 
 from ..climate import CONF_HAIER_ID, HonClimate
