@@ -1,0 +1,5 @@
+﻿sensor:
+  - platform: haier
+    haier_id: ${device_id}
+    ch2o_value:
+      name: ${device_name} ch2o value
