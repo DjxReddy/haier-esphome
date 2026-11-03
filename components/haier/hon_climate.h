@@ -55,6 +55,12 @@ class HonClimate : public HaierClimateBase {
     EXPANSION_VALVE_OPEN_DEGREE,
     SUB_SENSOR_TYPE_COUNT,
     BIG_DATA_FRAME_SUB_SENSORS = INDOOR_COIL_TEMPERATURE,
+
+    INDOOR_PM2P5_VALUE,
+    OUTDOOR_PM2P5_VALUE,
+    CH2O_VALUE,
+    VOC_VALUE,
+    CO2_VALUE,
   };
   void set_sub_sensor(SubSensorType type, sensor::Sensor *sens);
 
