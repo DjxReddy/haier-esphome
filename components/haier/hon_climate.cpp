@@ -844,6 +844,9 @@ haier_protocol::HandlerError HonClimate::process_status_message_(const uint8_t *
     this->update_sub_sensor_(
         SubSensorType::EXPANSION_VALVE_OPEN_DEGREE,
         encode_uint16(bd_packet->expansion_valve_open_degree[0], bd_packet->expansion_valve_open_degree[1]) / 4095.0);
+
+
+      
 #endif  // USE_SENSOR
 #ifdef USE_BINARY_SENSOR
     this->update_sub_binary_sensor_(SubBinarySensorType::OUTDOOR_FAN_STATUS, bd_packet->outdoor_fan_status);
@@ -875,6 +878,18 @@ haier_protocol::HandlerError HonClimate::process_status_message_(const uint8_t *
   }
   if ((this->sub_sensors_[(size_t) SubSensorType::HUMIDITY] != nullptr) && (packet.sensors.room_humidity <= 100)) {
     this->update_sub_sensor_(SubSensorType::HUMIDITY, (float) packet.sensors.room_humidity);
+
+       if ((this->sub_sensors_[(size_t) SubSensorType::INDOOR_PM2P5_VALUE] != nullptr)
+    this->update_sub_sensor_(SubSensorType::INDOOR_PM2P5_VALUE, (float) packet.sensors.indoor_pm2p5_value);
+       if ((this->sub_sensors_[(size_t) SubSensorType::OUTDOOR_PM2P5_VALUE] != nullptr)
+    this->update_sub_sensor_(SubSensorType::OUTDOOR_PM2P5_VALUE, packet.sensors.outdoor_pm2p5_value);
+       if ((this->sub_sensors_[(size_t) SubSensorType::CH2O_VALUE] != nullptr)
+    this->update_sub_sensor_(SubSensorType::CH2O_VALUE, packet.sensors.ch2o_value);
+       if ((this->sub_sensors_[(size_t) SubSensorType::VOC_VALUE] != nullptr)
+    this->update_sub_sensor_(SubSensorType::VOC_VALUE, packet.sensors.voc_value);
+       if ((this->sub_sensors_[(size_t) SubSensorType::CO2_VALUE] != nullptr)
+    this->update_sub_sensor_(SubSensorType::CO2_VALUE, packet.sensors.co2_value);
+      
   }
 #endif  // USE_SENSOR
   bool should_publish = false;
