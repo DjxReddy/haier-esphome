@@ -10,8 +10,8 @@ from esphome.const import (
     DEVICE_CLASS_HUMIDITY,
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_TEMPERATURE,
-    DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
-    DEVICE_CLASS_CARBON_DIOXIDE,
+    #DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+    #DEVICE_CLASS_CARBON_DIOXIDE,
     ENTITY_CATEGORY_DIAGNOSTIC,
     ICON_CURRENT_AC,
     ICON_FLASH,
@@ -27,8 +27,8 @@ from esphome.const import (
     UNIT_HERTZ,
     UNIT_PERCENT,
     UNIT_WATT,
-    UNIT_MICROGRAMS_PER_CUBIC_METER,
-    UNIT_PARTS_PER_MILLION
+   # UNIT_MICROGRAMS_PER_CUBIC_METER,
+   # UNIT_PARTS_PER_MILLION
 )
 
 from ..climate import CONF_HAIER_ID, HonClimate
@@ -46,11 +46,11 @@ CONF_OUTDOOR_DEFROST_TEMPERATURE = "outdoor_defrost_temperature"
 CONF_OUTDOOR_IN_AIR_TEMPERATURE = "outdoor_in_air_temperature"
 CONF_OUTDOOR_OUT_AIR_TEMPERATURE = "outdoor_out_air_temperature"
 
-CONF_INDOOR_PM2P5_VALUE = "indoor_pm2p5_value"
-CONF_OUTDOOR_PM2P5_VALUE = "outdoor_pm2p5_value"
-CONF_CH2O_VALUE = "ch2o_value"
-CONF_VOC_VALUE = "voc_value"
-CONF_CO2_VALUE = "co2_value"
+#CONF_INDOOR_PM2P5_VALUE = "indoor_pm2p5_value"
+#CONF_OUTDOOR_PM2P5_VALUE = "outdoor_pm2p5_value"
+#CONF_CH2O_VALUE = "ch2o_value"
+#CONF_VOC_VALUE = "voc_value"
+#CONF_CO2_VALUE = "co2_value"
  
 
 
