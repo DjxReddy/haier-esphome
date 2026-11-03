@@ -390,12 +390,7 @@ void HonClimate::process_phase(std::chrono::steady_clock::time_point now) {
             haier_protocol::FrameType::CONTROL, (uint16_t) hon_protocol::SubcommandsControl::GET_USER_DATA);
         static const haier_protocol::HaierMessage BIG_DATA_REQUEST(
             haier_protocol::FrameType::CONTROL, (uint16_t) hon_protocol::SubcommandsControl::GET_BIG_DATA);
-        if ((this->protocol_phase_ == ProtocolPhases::SENDING_FIRST_STATUS_REQUEST)) /*||
-            (!this->should_get_big_data_()*/
-      
-      /*я отключил*/
-      
-      
+        if (this->protocol_phase_ == ProtocolPhases::SENDING_FIRST_STATUS_REQUEST) ///// я отключил
        {
           this->send_message_(STATUS_REQUEST, this->use_crc_);
         } else {
