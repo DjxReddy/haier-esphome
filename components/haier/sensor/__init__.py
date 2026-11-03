@@ -150,43 +150,38 @@ SENSOR_TYPES = {
     
     CONF_INDOOR_PM2P5_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon="mdi:molecule",
+        icon="mdi:blur",
         accuracy_decimals=0,
-        device_class=DEVICE_CLASS_PM25,
+        device_class="pm25",
         state_class=STATE_CLASS_MEASUREMENT,
-       
     ),
     CONF_OUTDOOR_PM2P5_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon="mdi:molecule",
+        icon="mdi:blur",
         accuracy_decimals=0,
-        device_class=DEVICE_CLASS_PM25,
+        device_class="pm25",
         state_class=STATE_CLASS_MEASUREMENT,
-
     ),
     CONF_CH2O_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon="mdi:molecule",
-        accuracy_decimals=0,
-        device_class=DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+        icon="mdi:blur",
+        accuracy_decimals=2,
+        device_class="volatile_organic_compounds",
         state_class=STATE_CLASS_MEASUREMENT,
-
     ),
     CONF_VOC_VALUE: sensor.sensor_schema(
-        unit_of_measurement=UNIT_PARTS_PER_MILLION,
-        icon="mdi:molecule",
+        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+        icon="mdi:blur",
         accuracy_decimals=0,
-        device_class=DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS_PARTS,
+        device_class="volatile_organic_compounds_parts",
         state_class=STATE_CLASS_MEASUREMENT,
-
     ),
     CONF_CO2_VALUE: sensor.sensor_schema(
-        unit_of_measurement=UNIT_WATT,
-        icon="mdi:molecule",
+        unit_of_measurement=UNIT_PARTS_PER_MILLION,  # Обратите внимание: для CO2 лучше использовать PPM вместо WATT
+        icon="mdi:blur",
         accuracy_decimals=0,
-        device_class=DEVICE_CLASS_CARBON_DIOXIDE,
+        device_class="carbon_dioxide",
         state_class=STATE_CLASS_MEASUREMENT,
-
     ),
 
 
