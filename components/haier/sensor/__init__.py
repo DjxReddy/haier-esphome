@@ -46,11 +46,11 @@ CONF_OUTDOOR_DEFROST_TEMPERATURE = "outdoor_defrost_temperature"
 CONF_OUTDOOR_IN_AIR_TEMPERATURE = "outdoor_in_air_temperature"
 CONF_OUTDOOR_OUT_AIR_TEMPERATURE = "outdoor_out_air_temperature"
 
-#CONF_INDOOR_PM2P5_VALUE = "indoor_pm2p5_value"
-#CONF_OUTDOOR_PM2P5_VALUE = "outdoor_pm2p5_value"
-#CONF_CH2O_VALUE = "ch2o_value"
-#CONF_VOC_VALUE = "voc_value"
-#CONF_CO2_VALUE = "co2_value"
+CONF_INDOOR_PM2P5_VALUE = "indoor_pm2p5_value"
+CONF_OUTDOOR_PM2P5_VALUE = "outdoor_pm2p5_value"
+CONF_CH2O_VALUE = "ch2o_value"
+CONF_VOC_VALUE = "voc_value"
+CONF_CO2_VALUE = "co2_value"
  
 
 
@@ -147,42 +147,42 @@ SENSOR_TYPES = {
 
 
     
-#    CONF_INDOOR_PM2P5_VALUE: sensor.sensor_schema(
-#        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-#        icon="mdi:blur",
-#        accuracy_decimals=0,
-#        device_class="pm25",
-#        state_class=STATE_CLASS_MEASUREMENT,
-#    ),
-#    CONF_OUTDOOR_PM2P5_VALUE: sensor.sensor_schema(
-#        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-#        icon="mdi:blur",
-#        accuracy_decimals=0,
- #       device_class="pm25",
-#        state_class=STATE_CLASS_MEASUREMENT,
-#    ),
-#    CONF_CH2O_VALUE: sensor.sensor_schema(
-#        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-#        icon="mdi:blur",
-#        accuracy_decimals=2,
- #       device_class="volatile_organic_compounds",
-#        state_class=STATE_CLASS_MEASUREMENT,
-#    ),
-#    CONF_VOC_VALUE: sensor.sensor_schema(
- #       unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-#        icon="mdi:blur",
-#        accuracy_decimals=0,
-#        device_class="volatile_organic_compounds_parts",
-#        state_class=STATE_CLASS_MEASUREMENT,
-#    ),
-#    CONF_CO2_VALUE: sensor.sensor_schema(
-#        unit_of_measurement=UNIT_PARTS_PER_MILLION,  # Обратите внимание: для CO2 лучше использовать PPM вместо WATT
-#        icon="mdi:blur",
-#        accuracy_decimals=0,
-#        device_class="carbon_dioxide",
-#        state_class=STATE_CLASS_MEASUREMENT,
-#    ),
-#
+    CONF_INDOOR_PM2P5_VALUE: sensor.sensor_schema(
+        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+        icon="mdi:blur",
+        accuracy_decimals=0,
+        device_class="pm25",
+        state_class=STATE_CLASS_MEASUREMENT,
+    ),
+    CONF_OUTDOOR_PM2P5_VALUE: sensor.sensor_schema(
+        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+        icon="mdi:blur",
+        accuracy_decimals=0,
+        device_class="pm25",
+        state_class=STATE_CLASS_MEASUREMENT,
+    ),
+    CONF_CH2O_VALUE: sensor.sensor_schema(
+        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+        icon="mdi:blur",
+        accuracy_decimals=2,
+        device_class="volatile_organic_compounds",
+        state_class=STATE_CLASS_MEASUREMENT,
+    ),
+    CONF_VOC_VALUE: sensor.sensor_schema(
+        unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+        icon="mdi:blur",
+        accuracy_decimals=0,
+        device_class="volatile_organic_compounds_parts",
+        state_class=STATE_CLASS_MEASUREMENT,
+    ),
+    CONF_CO2_VALUE: sensor.sensor_schema(
+        unit_of_measurement=UNIT_PARTS_PER_MILLION,  # Обратите внимание: для CO2 лучше использовать PPM вместо WATT
+        icon="mdi:blur",
+        accuracy_decimals=0,
+        device_class="carbon_dioxide",
+        state_class=STATE_CLASS_MEASUREMENT,
+    ),
+
 
 
     
