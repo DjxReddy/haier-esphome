@@ -147,7 +147,7 @@ SENSOR_TYPES = {
     
     CONF_INDOOR_PM2P5_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon=ICON_CHEMICAL_WEAPON,
+        icon="mdi:molecule",
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_PM25,
         state_class=STATE_CLASS_MEASUREMENT,
@@ -155,7 +155,7 @@ SENSOR_TYPES = {
     ),
     CONF_OUTDOOR_PM2P5_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon=ICON_CHEMICAL_WEAPON,
+        icon="mdi:molecule",
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_PM25,
         state_class=STATE_CLASS_MEASUREMENT,
@@ -163,7 +163,7 @@ SENSOR_TYPES = {
     ),
     CONF_CH2O_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
-        icon=ICON_CHEMICAL_WEAPON,
+        icon="mdi:molecule",
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
         state_class=STATE_CLASS_MEASUREMENT,
@@ -171,7 +171,7 @@ SENSOR_TYPES = {
     ),
     CONF_VOC_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_PARTS_PER_MILLION,
-        icon=ICON_CHEMICAL_WEAPON,
+        icon="mdi:molecule",
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS_PARTS,
         state_class=STATE_CLASS_MEASUREMENT,
@@ -179,7 +179,7 @@ SENSOR_TYPES = {
     ),
     CONF_CO2_VALUE: sensor.sensor_schema(
         unit_of_measurement=UNIT_WATT,
-        icon=ICON_CHEMICAL_WEAPON,
+        icon="mdi:molecule",
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_CARBON_DIOXIDE,
         state_class=STATE_CLASS_MEASUREMENT,
