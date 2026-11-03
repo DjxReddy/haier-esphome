@@ -1,0 +1,5 @@
+﻿sensor:
+  - platform: haier
+    haier_id: ${device_id}
+    voc_value:
+      name: ${device_name} VOC value
