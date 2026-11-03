@@ -1,5 +1,5 @@
 ﻿sensor:
   - platform: haier
     haier_id: ${device_id}
-    outdoor_temperature:
+    indoor_pm2p5_value:
       name: ${device_name} indoor pm 2.5 value
