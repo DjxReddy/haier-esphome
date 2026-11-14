@@ -598,6 +598,26 @@ haier_protocol::HaierMessage HonClimate::get_control_message() {
           break;
       }
     }
+
+
+      
+if (this->pending_human_sensing_.has_value()) {
+  uint8_t mode = this->pending_human_sensing_.value();
+  out_data->human_sensing_status = mode;
+  if (mode > 0) {
+    out_data->horizontal_swing_mode = 7; // Активируем авто-жалюзи (дает байт 0x47 или 0x87)
+  }
+  this->current_human_sensing_ = mode;
+  this->pending_human_sensing_.reset();
+} else {
+  out_data->human_sensing_status = this->current_human_sensing_;
+  if (this->current_human_sensing_ > 0) {
+    out_data->horizontal_swing_mode = 7;
+  }
+}
+      
+
+      
     // Set swing mode
     if (climate_control.swing_mode.has_value()) {
       switch (climate_control.swing_mode.value()) {
@@ -985,6 +1005,10 @@ haier_protocol::HandlerError HonClimate::process_status_message_(const uint8_t *
     this->health_mode_ = packet.control.health_mode == 1 ? SwitchState::ON : SwitchState::OFF;
     should_publish = should_publish || (old_health_mode != this->get_health_mode());
   }
+    if (!this->pending_human_sensing_.has_value()) {
+  this->current_human_sensing_ = packet.control.human_sensing_status;
+    }
+    
   {
     CleaningState new_cleaning;
     if (packet.control.steri_clean == 1) {
