@@ -207,6 +207,10 @@ void set_human_sensing(uint8_t mode);
   uint8_t big_data_counter_{0};
   esphome::optional<hon_protocol::VerticalSwingMode> current_vertical_swing_{};
   esphome::optional<hon_protocol::HorizontalSwingMode> current_horizontal_swing_{};
+
+esphome::optional<uint8_t> pending_human_sensing_{};
+uint8_t current_human_sensing_{0};
+
   HonSettings settings_{};
   ESPPreferenceObject hon_rtc_;
   SwitchState quiet_mode_state_{SwitchState::OFF};
