@@ -879,9 +879,12 @@ haier_protocol::HandlerError HonClimate::process_status_message_(const uint8_t *
   if ((this->sub_sensors_[(size_t) SubSensorType::HUMIDITY] != nullptr) && (packet.sensors.room_humidity <= 100)) {
     this->update_sub_sensor_(SubSensorType::HUMIDITY, (float) packet.sensors.room_humidity);
       }
-  if ((this->sub_sensors_[(size_t) SubSensorType::INDOOR_PM2P5_VALUE] != nullptr)){
-    this->update_sub_sensor_(SubSensorType::INDOOR_PM2P5_VALUE, (float) packet.sensors.indoor_pm2p5_value);
-  }
+  if (( this-> sub_sensors_[( size_t) SubSensorType:: INDOOR_PM2P5_VALUE] != nullptr)){
+    uint16_t pm25_in = __builtin_bswap16(packet. sensors. indoor_pm2p5_value);
+    this-> update_sub_sensor_(SubSensorType:: INDOOR_PM2P5_VALUE, ( float) pm25_in);
+}
+// Аналогично для остальных датчиков качества воздуха...
+
   if ((this->sub_sensors_[(size_t) SubSensorType::OUTDOOR_PM2P5_VALUE] != nullptr)){
     this->update_sub_sensor_(SubSensorType::OUTDOOR_PM2P5_VALUE, packet.sensors.outdoor_pm2p5_value);
  }
