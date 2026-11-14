@@ -85,6 +85,12 @@ void HonClimate::set_horizontal_airflow(hon_protocol::HorizontalSwingMode direct
   this->force_send_control_ = true;
 }
 
+void HonClimate::set_human_sensing(uint8_t mode) {
+  this->pending_human_sensing_ = mode;
+  this->force_send_control_ = true;
+}
+
+
 std::string HonClimate::get_cleaning_status_text() const {
   switch (this->cleaning_status_) {
     case CleaningState::SELF_CLEAN:
