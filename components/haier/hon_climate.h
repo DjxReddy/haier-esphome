@@ -119,7 +119,12 @@ class HonClimate : public HaierClimateBase {
   bool get_beeper_state() const;
   void set_quiet_mode_state(bool state);
   bool get_quiet_mode_state() const;
-  esphome::optional<hon_protocol::VerticalSwingMode> get_vertical_airflow() const;
+ 
+uint8_t get_human_sensing() const { return this->current_human_sensing_; }
+void set_human_sensing(uint8_t mode);
+
+
+ esphome::optional<hon_protocol::VerticalSwingMode> get_vertical_airflow() const;
   void set_vertical_airflow(hon_protocol::VerticalSwingMode direction);
   esphome::optional<hon_protocol::HorizontalSwingMode> get_horizontal_airflow() const;
   void set_horizontal_airflow(hon_protocol::HorizontalSwingMode direction);
